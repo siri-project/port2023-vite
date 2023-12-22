@@ -349,4 +349,121 @@ button {
 #skip a:focus,
 #skip a:active {
   top: 10px;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10000;
+}
+#header .header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: rgba(116, 99, 99, 0.1);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+}
+#header .header-logo {
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1;
+  font-size: 0.9rem;
+}
+#header .header-logo em {
+  display: block;
+  font-size: 10px;
+  color: var(--black200);
+}
+@media (max-width: 800px) {
+  #header .header-nav {
+    display: none;
+  }
+}
+#header .header-nav.show {
+  display: block;
+}
+#header .header-nav.show + .header-nav-mobile span::before, #header .header-nav.show + .header-nav-mobile span::after {
+  width: 20px;
+}
+#header .header-nav.show ul {
+  position: absolute;
+  top: 68px;
+  right: 0;
+  z-index: 10000;
+  display: block;
+  min-width: 150px;
+  padding: 20px 0;
+  background-color: rgba(116, 99, 99, 0.1);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+}
+#header .header-nav.show li {
+  display: block;
+  text-align: right;
+}
+#header .header-nav.show li a {
+  display: inline-block;
+  padding: 10px;
+}
+#header .header-nav li {
+  display: inline;
+}
+#header .header-nav li a {
+  position: relative;
+  padding: 14px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+#header .header-nav li a:hover::before {
+  transform: scaleX(1);
+}
+#header .header-nav li a::before {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: 14px;
+  width: calc(100% - 28px);
+  height: 1px;
+  background-color: var(--black);
+  transform: scaleX(0);
+  transition: all 0.3s;
+}
+#header .header-nav-mobile {
+  display: none;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+@media (max-width: 800px) {
+  #header .header-nav-mobile {
+    display: block;
+  }
+}
+#header .header-nav-mobile span {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 2px;
+  margin-top: 19px;
+  background-color: var(--black);
+}
+#header .header-nav-mobile span::before, #header .header-nav-mobile span::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 2px;
+  background-color: var(--black);
+  transition: width 0.3s;
+}
+#header .header-nav-mobile span::before {
+  top: 6px;
+  right: 0;
+}
+#header .header-nav-mobile span::after {
+  bottom: 6px;
+  left: 0;
 }/*# sourceMappingURL=style.css.map */
