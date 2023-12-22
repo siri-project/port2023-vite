@@ -1,13 +1,50 @@
-$font-noto: ('Noto Sans KR', '맑은 고딕', 'Malgun Gothic', 'Apple SD Gothic Neo', 'Dotum', '돋움', 'Gulim', '굴림', '굴림체', Sans-Serif);
-$font-montserrat: ('Montserrat', 'Noto Sans KR', '맑은 고딕', 'Malgun Gothic', 'Apple SD Gothic Neo', 'Dotum', '돋움', 'Gulim', '굴림', '굴림체', Sans-Serif);
-$font-lato: ('lato', 'Noto Sans KR', '맑은 고딕', 'Malgun Gothic', 'Apple SD Gothic Neo', 'Dotum', '돋움', 'Gulim', '굴림', '굴림체', Sans-Serif);
-$font-KHNPHD: ('KHNPHD', 'Noto Sans KR', '맑은 고딕', 'Malgun Gothic', 'Apple SD Gothic Neo', 'Dotum', '돋움', 'Gulim', '굴림', '굴림체', Sans-Serif);
-$font-reko: ('Recipekorea', 'Noto Sans KR', '맑은 고딕', 'Malgun Gothic', 'Apple SD Gothic Neo', 'Dotum', '돋움', 'Gulim', '굴림', '굴림체', Sans-Serif);
-$font-roboto: ('Roboto', 'Noto Sans KR', '맑은 고딕', 'Malgun Gothic', 'Apple SD Gothic Neo', 'Dotum', '돋움', 'Gulim', '굴림', '굴림체', Sans-Serif);
-$font-gmarket: ('GmarketSans', 'Noto Sans KR', '맑은 고딕', 'Malgun Gothic', 'Apple SD Gothic Neo', 'Dotum', '돋움', 'Gulim', '굴림', '굴림체', Sans-Serif);
-$font-verdana: (Verdana, Geneva, Tahoma, sans-serif);
-$font-pretendard: (Pretendard, 'Noto Sans KR', '맑은 고딕', 'Malgun Gothic', 'Apple SD Gothic Neo', 'Dotum', '돋움', 'Gulim', '굴림', '굴림체', Sans-Serif);
-
 $max-width: 1200;
 $min-mobile: 320;
 $max-mobile: 720;
+
+:root {
+	--mainEng-font: "Montserrat";
+	--mainKor-font: "nanumSquareNeo";
+	--mainNum-font: "gmarket";
+
+	--mainBg-color: #f3ede8;
+	--subBg100: #cdc0b1;
+	--subBg200: #afa395;
+	--subBg300: #81887c;
+	--subBg400: #afa7a2;
+	--subBg500: #a6afa2;
+
+	--white: #fff;
+	--black: #000;
+	--black100: #2b2b2b;
+	--black200: #434343;
+	--black300: #686868;
+	--black400: #e0e0e0;
+
+	// 기본 폰트 설정
+	font-family: var(--mainEng-font), var(--mainKor-font);
+	font-size: 16px;
+	line-height: 1.5;
+	font-weight: 400;
+
+	// 폰트를 부드럽게 렌더링하기 위한 속성
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	// 아이폰 가로 모드에서 글씨 확대 금지
+	-webkit-text-size-adjust: 100%;
+}
+
+@media (max-width: 800px) {
+	:root {
+		font-size: 14px;
+		line-height: 1.4;
+	}
+}
+
+body {
+	color: var(--black100);
+	background-color: var(--mainBg-color);
+}

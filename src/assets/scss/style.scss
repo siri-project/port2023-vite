@@ -6,11 +6,16 @@
 @import "abstracts/mixins";
 @import "abstracts/extend";
 
-// reset
+// module
+@import "module/font";
 @import "module/reset";
-
-// base
 @import "module/base";
 
-// motion
-// @import "module/animate";
+// layout
+@import "layout/header";
+@import "layout/intro";
+@import "layout/skill";
+@import "layout/site";
+@import "layout/port";
+@import "layout/contact";
+@import "layout/footer";

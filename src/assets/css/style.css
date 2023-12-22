@@ -1,3 +1,45 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://websfont.github.io/nanumSquareNeo/nanumSquareNeo.css");
+@import url("https://websfont.github.io/gmarket/gmarket.css");
+:root {
+  --mainEng-font: "Montserrat";
+  --mainKor-font: "nanumSquareNeo";
+  --mainNum-font: "gmarket";
+  --mainBg-color: #f3ede8;
+  --subBg100: #cdc0b1;
+  --subBg200: #afa395;
+  --subBg300: #81887c;
+  --subBg400: #afa7a2;
+  --subBg500: #a6afa2;
+  --white: #fff;
+  --black: #000;
+  --black100: #2b2b2b;
+  --black200: #434343;
+  --black300: #686868;
+  --black400: #e0e0e0;
+  font-family: var(--mainEng-font), var(--mainKor-font);
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (max-width: 800px) {
+  :root {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}
+body {
+  color: var(--black100);
+  background-color: var(--mainBg-color);
+}
+
 .grid {
   *zoom: 1;
 }
@@ -160,6 +202,18 @@
   }
 }
 
+.mont {
+  font-family: "Montserrat";
+}
+
+.nanum {
+  font-family: "nanumSquareNeo";
+}
+
+.gmarket {
+  font-family: "gmarket";
+}
+
 html {
   overflow-x: hidden;
   -ms-text-size-adjust: 100%;
@@ -171,11 +225,22 @@ html, body, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, fo
   padding: 0;
 }
 
+body,
+button,
+input,
+select,
+table,
+textarea {
+  font-family: var(--mainEng-font), var(--mainKor-font), "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", helvetica, sans-serif;
+}
+
 img, fieldset {
   border: 0;
 }
 
-a {
+a,
+a:hover,
+a:focus {
   color: inherit;
   text-decoration: none;
 }
@@ -270,26 +335,18 @@ button {
   cursor: pointer;
 }
 
-.promotion,
-.product-eco,
-.fullservice {
-  text-align: center;
+#skip a {
+  position: absolute;
+  left: 10px;
+  top: -92px;
+  z-index: 100000;
+  font-size: 1rem;
+  padding: 10px 30px;
+  color: var(--white);
+  background: var(--black);
 }
-.promotion [class^=sector-],
-.product-eco [class^=sector-],
-.fullservice [class^=sector-] {
-  position: relative;
-}
-.promotion .wrap,
-.product-eco .wrap,
-.fullservice .wrap {
-  position: relative;
-  margin: 0 auto;
-}
-.promotion .wrap-full,
-.product-eco .wrap-full,
-.fullservice .wrap-full {
-  position: relative;
-  width: 100%;
-  margin: 0 auto;
+
+#skip a:focus,
+#skip a:active {
+  top: 10px;
 }/*# sourceMappingURL=style.css.map */
