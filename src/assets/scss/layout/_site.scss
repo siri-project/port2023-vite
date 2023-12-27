@@ -1,2 +1,137 @@
 #site {
+	.site-inenr {
+		padding: 16px;
+	}
+	.site-title {
+		position: sticky;
+		top: 70px;
+		left: 0;
+		width: 70%;
+		height: 5vw;
+		margin-bottom: 100px;
+		line-height: 1.6;
+		font-family: var(--mainKor-font);
+		font-size: 4vw;
+		font-weight: 900;
+		color: var(--black100);
+		text-transform: uppercase;
+		border-bottom: 0.4vw solid var(--black100);
+		@media (max-width: 800px){
+			top: 68px;
+			z-index: 100;
+			width: 100%;
+			height: auto;
+			margin-bottom: 10vw;
+			font-size: 30px;
+			background-color: var(--mainBg-color);
+		}
+		em {
+			line-height: 2;
+			font-size: 1.25rem;
+			font-weight: 400;
+		}
+	}
+	.site-item {
+		position: sticky;
+		left: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		height: 70vh;
+		&.item-1 {
+			top: 180px;
+			background-color: var(--subBg100);
+			@media (max-width: 800px) {
+				top: 140px;
+			}
+		}
+		&.item-2 {
+			top: 200px;
+			background-color: var(--subBg200);
+			@media (max-width: 800px) {
+				top: 160px;
+			}
+		}
+		&.item-3 {
+			top: 220px;
+			background-color: var(--subBg300);
+			@media (max-width: 800px) {
+				top: 180px;
+			}
+		}
+		&.item-4 {
+			top: 240px;
+			background-color: var(--subBg400);
+			@media (max-width: 800px) {
+				top: 200px;
+			}
+		}
+		.num {
+			position: absolute;
+			top: 1vw;
+			left: 1vw;
+			line-height: 1;
+			font-family: var(--mainNum-font);
+			font-size: 5vw;
+			font-weight: 900;
+			@media (max-width: 800px) {
+				top: 20px;
+				left: 20px;
+				font-size: 80px;
+			}
+		}
+		.text {
+			margin-bottom: 1rem;
+			text-align: center;
+			& > div {
+				line-height: 1;
+				font-family: var(--mainEng-font);
+				font-size: 3vw;
+				font-weight: 900;
+				text-decoration: underline;
+				text-transform: uppercase;
+				@media (max-width: 800px) {
+					font-size: 26px;
+				}
+			}
+		}
+		.title {
+			margin-bottom: 1rem;
+			font-family: var(--mainKor-font);
+		}
+		.btn a {
+			font-size: 1rem;
+			color: var(--black200);
+			text-decoration: underline;
+			text-transform: uppercase;
+			@include transition(all, 0.3s);
+			&:hover {
+				color: var(--black);
+			}
+		}
+		.info {
+			position: absolute;
+			bottom: 3%;
+			left: 0;
+			display: flex;
+			justify-content: space-between;
+			width: 98%;
+			margin-left: 1%;
+			border-top: 1px solid var(--black);
+			border-bottom: 1px solid var(--black);
+			@media (max-width: 800px) {
+				flex-direction: column;
+				width: 90%;
+				margin-left: 5%;
+				padding: 5px 0;
+			}
+			span {
+				padding: 3px 0;
+				font-family: var(--mainKor-font);
+				font-size: 12px;
+				text-transform: uppercase;
+			}
+		}
+	}
 }
