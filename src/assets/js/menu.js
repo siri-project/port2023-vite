@@ -3,7 +3,7 @@ export function menu() {
 	const headerNav = document.querySelector('.header-nav');
 
 	if (headerToggle) {
-		headerToggle.addEventListener('click', ()=>{
+		headerToggle.addEventListener('click', () => {
 			headerNav.classList.toggle('show');
 			headerToggle.getAttribute('aria-expanded') === 'true' ? headerToggle.setAttribute('aria-expanded', 'false') : headerToggle.setAttribute('aria-expanded', 'true');
 		});
