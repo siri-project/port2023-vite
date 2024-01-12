@@ -5,7 +5,7 @@
 이 과정에서 여러 가지 프레임워크들을 어떻게 적용하는지 알아보고, 
 각 프레임워크들의 장단점을 비교 분석하며 학습하게 됩니다.
 
-1. [vite](https://github.com/webstoryboy/port2023-vite)를 이용하여 사이트를 제작합니다. 
+1. [vite](https://github.com/siri-project/port2023-vite)를 이용하여 사이트를 제작합니다. 
 2. [react.js](https://github.com/webstoryboy/port2023-react)를 이용하여 사이트를 제작합니다. 
 3. [vue.js](https://github.com/webstoryboy/port2023-vue)를 이용하여 사이트를 제작합니다.
 4. [next.js](https://github.com/webstoryboy/port2023-next)를 이용하여 사이트를 제작합니다.
